@@ -418,9 +418,9 @@ header .intro-text {
 
 header .intro-text .intro-lead-in {
   margin-bottom:25px;
-  font-size:22px;
+  font-size:20px;
   font-style:italic;
-  line-height:22px;
+  line-height:21px;
 }
 
 header .intro-text .intro-heading {
@@ -2303,8 +2303,23 @@ img.mfp-img {
 /*-----------------------------------------------------------------------------------*/
 /*  WODRY
 /*-----------------------------------------------------------------------------------*/
-.wodry-flipping {
+.wodry, .wodry-flipping, .wodry-flipping .front-face, .wodry-flipping .back-face {
+  display: block;
+}
+
+@media(min-width:2000px) {
+  .wodry, .wodry-flipping, .wodry-flipping .front-face, .wodry-flipping .back-face {
     display: inline-block;
+  }
+}
+
+.wodry {
+  white-space: nowrap;
+}
+
+.wodry-flipping {
+    /*display: inline-block;*/
+    /*display: block;*/
     position: relative;
     -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
@@ -2315,7 +2330,8 @@ img.mfp-img {
 }
 
 .wodry-flipping .front-face, .wodry-flipping .back-face {
-    display: inline-block;
+    /*display: inline-block;*/
+    /*display: block;*/
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
     -ms-backface-visibility: hidden;
