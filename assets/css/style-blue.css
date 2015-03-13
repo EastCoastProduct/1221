@@ -2639,6 +2639,10 @@ img.mfp-img {
   padding-left: 30px;
 }
 
+#company p {
+  font-size: 16px;
+}
+
 /* TODO REMOVE */
 #just-a-button {
   position: relative;
