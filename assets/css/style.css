@@ -676,6 +676,10 @@ section h3.section-subheading-small span {
 	margin-bottom: 50px;
 }
 
+#post-content h2 {
+	color: #2971bb;
+}
+
 #post-content p {
 	margin-bottom: 30px;
 }
@@ -2554,6 +2558,7 @@ img.mfp-img {
 	vertical-align: top;
 	padding: 0;
 	margin: 0 20px 20px;
+	list-style: none;
 }
 
 @media(max-width: 500px) {
@@ -2567,7 +2572,8 @@ img.mfp-img {
 }
 
 .faq-list li:first-child {
-	list-style: none;
+	color: #2971bb;
+	/*list-style: none;*/
 	font-size: 18px;
 	font-weight: 400;
 	margin-left: -20px;
