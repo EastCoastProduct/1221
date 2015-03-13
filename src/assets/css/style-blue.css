@@ -1223,12 +1223,12 @@ ul.social-buttons li a.google:hover {
 
 ::-moz-selection {
   text-shadow:none;
-  background:#2971bb
+  background:#61a3dc
 }
 
 ::selection {
   text-shadow:none;
-  background:#2971bb
+  background:#61a3dc
 }
 
 img::selection {
@@ -1240,7 +1240,7 @@ img::-moz-selection {
 }
 
 body {
-  webkit-tap-highlight-color:#2971bb
+  webkit-tap-highlight-color:#61a3dc
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -2449,7 +2449,7 @@ img.mfp-img {
   }
 
   header .intro-text {
-    padding-top:300px;
+    padding-top:290px;
     padding-bottom:200px
   }
 
@@ -2572,7 +2572,7 @@ img.mfp-img {
 }
 
 @media(min-width: 992px) {
-  #investment .col-md-4 {  
+  #investment .col-md-4 {
     width: 18%;
   }
 }
@@ -2602,7 +2602,7 @@ img.mfp-img {
   text-transform: capitalize;
 }
 
-#company .col-md-3 {
+#about .col-md-3 {
   float: none;
   margin: 0 auto;
 }

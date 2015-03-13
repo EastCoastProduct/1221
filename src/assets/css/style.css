@@ -1227,12 +1227,12 @@ ul.social-buttons li a.google:hover {
 
 ::-moz-selection {
 	text-shadow:none;
-	background:#29BB2B
+	background:#61a3dc
 }
 
 ::selection {
 	text-shadow:none;
-	background:#29BB2B
+	background:#61a3dc
 }
 
 img::selection {
@@ -1244,7 +1244,7 @@ img::-moz-selection {
 }
 
 body {
-	webkit-tap-highlight-color:#29BB2B
+	webkit-tap-highlight-color:#61a3dc
 }
 
 /*-----------------------------------------------------------------------------------*/
