@@ -399,13 +399,6 @@ h1,h2,h3,h4,h5,h6 {
   box-shadow:inset 0 0 100px 0 rgba(0,0,0,0.4);
 }
 
-
-
-#tubular-container {
-  z-index: -1 !important;
-  position: absolute !important;
-}
-
 header {
   text-align:center;
   color:#fff;
@@ -1085,13 +1078,6 @@ textarea#comments {
     -moz-osx-font-smoothing: grayscale;
     padding: 0 10px 0 0;
     content: "\e684";
-}
-
-.about-us-widget {
-  background-image: url(../img/world-map.png);
-   background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100%;
 }
 
 .widget .media-heading {
