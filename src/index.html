@@ -113,9 +113,24 @@
     <div class="container">
         <div class="intro-text">
             <div class="intro-lead-in wow bounceInDown" data-wow-delay="0.5s">1221 Capital Investment Programs provide <span class="wodry">active portfolio management|strategies for up or down markets|mathematical advantages in the market</span></div>
-            <!-- <div class="intro-lead-in wow bounceInDown" data-wow-delay="0.5s">See how managed futures can <span class="wodry">Enhance Your Portfolio|Balance Your Portfolio|Grow Your Portfolio</span></div> -->
             <div class="intro-heading wow bounceInUp" data-wow-delay="1s">1221 <span class="thin">Capital LLC</span></div>
             <a href="404.html" class="page-scroll btn btn-xl btn-negative  wow bounceInDown" data-wow-delay="2s">Learn More <i class="fa fa-angle-down fa-2x"></i></a>
+            <!-- TODO REMOVE -->
+
+            <button id="transparent-this" style="line-height:38px;" class="page-scroll btn btn-xl btn-negative wow bounceInDown" data-wow-delay="2s">Toggle</button>
+            <style>
+              .backstretch.transparent:before {
+                background-color: rgba(0,0,0,0.0);
+              }
+            </style>
+            <script>
+              $(document).ready(function(){
+                $('#transparent-this').click(function(){
+                  $('.backstretch').toggleClass('transparent');
+                });
+              });
+            </script>
+            <!--  -->
         </div>
     </div>
 </header>
@@ -127,7 +142,6 @@
             <div class="row">
                 <div class="col-lg-12 text-center wow fadeInDown">
                     <h2 class="section-heading">The <strong>Company</strong></h2>
-                    <!-- <h3 class="section-subheading text-muted">1221 Capital's aim is to be exceptional stewards of capital and be the bridge that increases the financial independence of investors everywhere.</h3> -->
                     <h3 class="section-subheading text-muted">1221 Capital LLC is a boutique investment firm specializing in trading commodity and financial futures.<i></i> 1221 Capital offers investment programs designed to deliver consistent, positive results regardless of stock market direction, and put the odds of success firmly on the side of the investor.</h3>
                 </div>
             </div>
@@ -137,27 +151,12 @@
                 </div>
                 <div class="col-md-8 wow fadeInRight">
                     <p>1221 Capital LLC is a Boston based investment firm registered with the Commodity Futures Trading Commission and member of the National Futures Association. As Commodity Trading Advisors, we offer individual investors as well as institutional investors the opportunity to diversify their portfolio in an asset class called Managed Futures. 1221 Capital investment programs are offered through Separately Managed Accounts. We happily work individually with investors or alongside their current team of investment advisors. The goal is to identify an investment program which will best support the clients current portfolio and investment goals as a diversification tool. When working with 1221 Capital, clients can expect prompt professional service from a dedicated account manager who will take all the time necessary for the client to have a thorough understanding of their account and investment process.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-                    <!-- <p>At 1221 Capital LLC, we are capitalists and view wealth creation a noble pursuit. Our investment programs offer the incredible opportunities provided in the futures markets as well as a liquid diversification solution.</p> -->
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- SUB header section -->
-<!--
-<section id="subhead-section">
-    <div class="section-inner-small">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center wow fadeInDown">
-                    <h3 class="section-subheading-small text-muted"><span>1221 Capital LLC</span> is a boutique investment firm specializing in trading commodity and financial futures. 1221 Capital offers investment programs designed to deliver consistent, positive results regardless of stock market direction, and put the odds of success firmly on the side of the investor.</h3>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
- -->
 <!-- Investments Header Section -->
 <section id="investments-header" class="divider-wrapper opaqued" data-parallax="scroll" data-image-src="assets/img/img01.jpg" data-speed="0.7">
     <div class="section-inner">
@@ -170,50 +169,6 @@
         </div>
     </div>
 </section>
-<!-- Services Section -->
-<!--
-<section id="services">
-    <div class="section-inner">
-        <div class="container">
-            <div class="row wow fadeInUp">
-                <div class="col-md-4 service-item">
-                    <div class="row">
-                        <div class="col-md-2 col-sm-2 col-xs-2 service-icon">
-                            <i class="pe-7s-graph1 fa-4x"></i>
-                        </div>
-                        <div class="col-md-10 col-sm-10 col-xs-10 pull-right">
-                            <h4 class="service-heading">Growth</h4>
-                            <p class="text-muted">Managed Futures programs have the ability to grow throughout a variety of economic conditions and historically have shown a low correlation to traditional asset classes.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 service-item">
-                    <div class="row">
-                        <div class="col-md-2 col-sm-2 col-xs-2 service-icon">
-                            <i class="pe-7s-glasses fa-4x"></i>
-                        </div>
-                        <div class="col-md-10 col-sm-10 col-xs-10 pull-right">
-                            <h4 class="service-heading">Focus</h4>
-                            <p class="text-muted">At 1221 Capital, our sole purpose is managed futures. This focus has made us experts in this area, and able to introduce exceptional opportunities to our clients.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 service-item">
-                    <div class="row">
-                        <div class="col-md-2 col-sm-2 col-xs-2 service-icon">
-                            <i class="pe-7s-graph2 fa-4x"></i>
-                        </div>
-                        <div class="col-md-10 col-sm-10 col-xs-10 pull-right">
-                            <h4 class="service-heading">Strategy</h4>
-                            <p class="text-muted">1221 Capital’s strategies utilize mathematical techniques with an emphasis on risk versus reward to increase the probability of success for the investor.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
--->
 
 <!-- Investments Section -->
 <section id="investment">
