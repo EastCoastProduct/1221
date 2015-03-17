@@ -229,11 +229,11 @@ h1,h2,h3,h4,h5,h6 {
 
 .navbar-default {
   color: #fff;
-  font-family: 'Lato',"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: 'Lato','Helvetica Neue',Helvetica,Arial,sans-serif;
 }
 
 .navbar-brand {
-  font-family: 'Lato',"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: 'Lato','Helvetica Neue',Helvetica,Arial,sans-serif;
   margin-top: 10px;
 }
 
@@ -2444,13 +2444,29 @@ button::-moz-focus-inner {
 	margin: 0 auto 20px;
 }*/
 
+#about .col-md-7 p {
+  padding-left: 30px;
+}
+
+#investments-header .section-inner {
+  padding: 100px 0;
+}
+
 @media(min-width: 992px) {
+  .large-font, .large-font p {
+    font-size: 16px;
+  }
+
   #investment .col-md-4 {
     width: 18%;
   }
 
   #company .col-md-4>img {
     margin-top: 5px;
+  }
+
+  #investments-header .section-inner {
+    padding: 80px 0 620px 0;
   }
 }
 
@@ -2460,33 +2476,7 @@ button::-moz-focus-inner {
     margin-bottom: 15px;
   }
 
-  #company .col-md-4>img {
+  #contactform, #company .col-md-4>img {
     margin-bottom: 15px;
   }
-}
-
-#investments-header .section-inner {
-  padding: 100px 0;
-}
-
-@media(min-width:992px) {
-  #investments-header .section-inner {
-    padding: 80px 0 620px 0;
-  }
-}
-
-#investment, #investment p {
-  font-size: 16px;
-}
-
-#about .col-md-7 p, #about .col-lg-10 p {
-  font-size: 16px;
-}
-
-#about .col-md-7 p {
-  padding-left: 30px;
-}
-
-#company p {
-  font-size: 16px;
 }
