@@ -34,7 +34,7 @@ $(document).ready(function(){
     });
 
     //REVIEW CIRCLES
-    $('.stat-circle').circliful();
+    // $('.stat-circle').circliful();
 
     //NEAT VID EMBEDS
     $().prettyEmbed({ useFitVids: true });
@@ -118,17 +118,17 @@ $(function() {
     });
 
     // SEARCH //
-    $('a[href="#search"]').on('click', function(event) {
-        event.preventDefault();
-        $('#search-wrapper').addClass('open');
-        $('#search-wrapper > form > input[type="search"]').focus();
-    });
-
-    $('#search-wrapper, #search-wrapper button.close').on('click keyup', function(event) {
-        if (event.target == this || event.target.className == 'close' || event.keyCode == 27) {
-            $(this).removeClass('open');
-        }
-    });
+    // $('a[href="#search"]').on('click', function(event) {
+    //     event.preventDefault();
+    //     $('#search-wrapper').addClass('open');
+    //     $('#search-wrapper > form > input[type="search"]').focus();
+    // });
+    //
+    // $('#search-wrapper, #search-wrapper button.close').on('click keyup', function(event) {
+    //     if (event.target == this || event.target.className == 'close' || event.keyCode == 27) {
+    //         $(this).removeClass('open');
+    //     }
+    // });
 
     $('form').submit(function(event) {
         event.preventDefault();
@@ -156,24 +156,24 @@ $(function() {
 /*-----------------------------------------------------------------------------------*/
 /*  PORTFOLIO
 /*-----------------------------------------------------------------------------------*/
-$(window).load(function() {
-    'use strict';
-
-    var portfolio_selectors = $('.portfolio-filter li a');
-
-    if(portfolio_selectors!='undefined'){
-        var portfolio = $('.portfolio-items');
-
-        portfolio_selectors.on('click', function(e){
-            e.preventDefault();
-            portfolio_selectors.removeClass('active');
-            $(this).addClass('active');
-            var selector = $(this).attr('data-filter');
-            portfolio.isotope({ filter: selector });
-            return false;
-        });
-    }
-});
+// $(window).load(function() {
+//     'use strict';
+//
+//     var portfolio_selectors = $('.portfolio-filter li a');
+//
+//     if(portfolio_selectors!='undefined'){
+//         var portfolio = $('.portfolio-items');
+//
+//         portfolio_selectors.on('click', function(e){
+//             e.preventDefault();
+//             portfolio_selectors.removeClass('active');
+//             $(this).addClass('active');
+//             var selector = $(this).attr('data-filter');
+//             portfolio.isotope({ filter: selector });
+//             return false;
+//         });
+//     }
+// });
 
 /*-----------------------------------------------------------------------------------*/
 /*  PRELOADER
