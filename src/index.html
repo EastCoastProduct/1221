@@ -58,6 +58,18 @@
     });
 </script>
 
+<!-- Google Analytics -->
+<script>
+  // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  // (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  // m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  // })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  //
+  // ga('create', 'UA-XXXX-Y', 'auto');
+  // ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
 </head>
 
 <body id="page-top" class="index">
@@ -79,7 +91,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#page-top"><span>1221</span> Capital LLC</a>
+            <a class="navbar-brand page-scroll" href="#page-top"><span>1221</span> Capital LLC</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -113,9 +125,9 @@
         <div class="intro-text">
             <div class="intro-lead-in wow bounceInDown" data-wow-delay="0.5s">1221 Capital Investment Programs provide <span class="wodry">active portfolio management|strategies for up or down markets|mathematical advantages in the market</span></div>
             <div class="intro-heading wow bounceInUp" data-wow-delay="1s">1221 <span class="thin">Capital LLC</span></div>
-            <a href="#company" class="page-scroll btn btn-xl btn-negative  wow bounceInDown" data-wow-delay="2s">Learn More <i class="fa fa-angle-down fa-2x"></i></a>
-            <!-- TODO REMOVE -->
+            <a href="#company" class="page-scroll btn btn-xl btn-negative wow bounceInDown" data-wow-delay="2s">Learn More <i class="fa fa-angle-down fa-2x"></i></a>
 
+            <!-- TODO REMOVE -->
             <button id="transparent-this" style="line-height:38px;" class="page-scroll btn btn-xl btn-negative wow bounceInDown" data-wow-delay="2s">Toggle</button>
             <style>
               .backstretch.transparent:before {
@@ -245,16 +257,6 @@
                     <div class="team-member">
                         <div class="team-card">
                             <img src="assets/img/team/portrait.jpg" class="img-responsive" alt="">
-                            <ul class="list-inline social-buttons">
-                                <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
-                                </li>
-                                <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a>
-                                </li>
-                                <li><a class="google" href="#"><i class="fa fa-google-plus"></i></a>
-                                </li>
-                                <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a>
-                                </li>
-                            </ul>
                         </div>
                         <h4>Joseph F. Siracusa</h4>
                         <p class="text-muted">President</p>
@@ -282,13 +284,36 @@
             <div class="row">
                 <div class="col-md-6">
                     <div id="message"></div>
-                    <form class="clearfix" method="post" action="sendemail.php" id="contactform">
-                        <p><input type="text" class="form-control" name="name" placeholder="Your Name *" id="name" required data-validation-required-message="Please enter your name." /></p>
-                        <p><input type="text" class="form-control" name="email" placeholder="Your Email *" id="email" required data-validation-required-message="Please enter your email address." /></p>
-                        <p><input type="text" class="form-control" name="website" placeholder="Your Subject *" id="website" required data-validation-required-message="Please enter your Subject." /></p>
-                        <p><textarea name="comments" class="form-control" id="comments" placeholder="Your Message *" required data-validation-required-message="Please enter a message."></textarea></p>
+                    <script type="text/javascript">var submitted=false;</script>
+                    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location.reload()}"></iframe>
+                    <form action="https://docs.google.com/forms/d/1CgKYx62UXN077-ZsRbAIETkyPpQrqfMay9a_sPIr_1Y/formResponse?embedded=true" method="post"
+                    target="hidden_iframe" onsubmit="submitted=true;" name="contactForm"
+                    id="contactform" class="clearfix">
+                        <p>
+                          <input type="text" class="form-control" placeholder="Your Name *"
+                          required data-validation-required-message="Please enter your name."
+                          id="entry_461026097" name="entry.461026097" />
+                        </p>
+                        <p>
+                          <input type="text" class="form-control" placeholder="Your Email *"
+                          required data-validation-required-message="Please enter your email address."
+                          id="entry_880801695" name="entry.880801695" />
+                          </p>
+                        <p>
+                          <input type="text" class="form-control" placeholder="Your Subject *"
+                          required data-validation-required-message="Please enter your Subject."
+                          id="entry_1799992726" name="entry.1799992726" />
+                          </p>
+                        <p>
+                          <textarea class="form-control" placeholder="Your Message *"
+                          required data-validation-required-message="Please enter a message."
+                          id="entry_554991968" name="entry.554991968">
+                          </textarea>
+                        </p>
+                        <input type="hidden" name="draftResponse" value="[,,&quot;4434820533925525493&quot;]">
+                        <input type="hidden" name="pageHistory" value="0">
+                        <input type="hidden" name="fbzx" value="4434820533925525493">
                         <input class="btn btn-outlined btn-primary pull-right" type="submit" name="submit" value="Submit" />
-                        </style>
                     </form>
                 </div>
                 <div class="col-md-6">
@@ -331,18 +356,8 @@
 
 <!-- Plugins -->
 <script src="assets/js/jqBootstrapValidation.js"></script>
-<script src="assets/js/contact_me.js"></script>
 
 <!-- Custom JavaScript -->
 <script src="assets/js/init.js"></script>
-
-<script>
-    $('nav ul').find('a').click(function(){
-        var $href = $(this).attr('href');
-        var $anchor = $($href).offset();
-        $('html, body').animate({ scrollTop: $anchor.top });
-        return false;
-    });
-</script>
 </body>
 </html>
