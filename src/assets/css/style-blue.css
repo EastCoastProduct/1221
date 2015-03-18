@@ -275,10 +275,17 @@ h1,h2,h3,h4,h5,h6 {
   transition:all .5s ease-in-out
 }
 
-.navbar-default .nav li a:hover,.navbar-default .nav li a:focus {
+
+.navbar-default .nav li a:visited, .navbar-default .nav li a:focus {
+  outline: 0;
+  color: #fff;
+}
+
+.navbar-default .nav li a:hover {
   outline: 0;
   color: #29BB2B;
 }
+
 
 .navbar-default .navbar-nav>.active>a {
   border-radius:0;
@@ -307,8 +314,8 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .navbar-default .navbar-nav>.active>a:hover,.navbar-default .navbar-nav>.active>a:focus {
-  color:#fff;
-  background-color:#2971bb
+  color:#29BB2B;
+  background-color:transparent;
 }
 
 .dropdown-menu {
@@ -2480,3 +2487,7 @@ button::-moz-focus-inner {
     margin-bottom: 15px;
   }
 }
+
+/*nav ul a:visited, nav ul a:active, nav ul a:focus {
+  color: red !important;
+}*/
