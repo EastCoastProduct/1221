@@ -18,76 +18,13 @@ $(document).ready(function(){
          jQuery('.navbar-fixed-top').removeClass('wow');
     }
 
-    // ADD SLIDEDOWN ANIMATION TO DROPDOWN //
-    $('.dropdown').on('show.bs.dropdown', function(e){
-        $(this).find('.dropdown-menu').first().stop(true, true).slideDown();
-    });
-
-    // ADD SLIDEUP ANIMATION TO DROPDOWN //
-    $('.dropdown').on('hide.bs.dropdown', function(e){
-        $(this).find('.dropdown-menu').first().stop(true, true).slideUp();
-    });
-
     // Closes the Responsive Menu on Menu Item Click
     $('.navbar-collapse ul li a').click(function() {
         $('.navbar-toggle:visible').click();
     });
 
-    //REVIEW CIRCLES
-    // $('.stat-circle').circliful();
-
-    //NEAT VID EMBEDS
-    $().prettyEmbed({ useFitVids: true });
-
-    //COUNTER
-    jQuery('.countup').counterUp({
-        delay: 10,
-        time: 1000
-    });
-
     $('.lb-link').magnificPopup({
       type: 'image'
-    });
-
-    //BACK TO TOP
-    $('a#back-to-top ').click(function(event) {
-      event.preventDefault();
-      $('html, body').animate({
-        scrollTop: $("body").offset().top
-      }, 500);
-    });
-
-    //NICESCROLL
-    //jQuery("body").niceScroll({
-      //cursorcolor: '#474550',
-      //cursorwidth: 15,
-      //cursorborderradius: 0,
-      //cursorborder: '0px solid #fff',
-      //zindex: 10
-    //});
-
-    //CONTACT FORM
-    $('#contactform').submit(function(){
-      var action = $(this).attr('action');
-      $("#message").slideUp(750,function() {
-      $('#message').hide();
-      $('#submit').attr('disabled','disabled');
-      $.post(action, {
-        name: $('#name').val(),
-        email: $('#email').val(),
-        website: $('#website').val(),
-        comments: $('#comments').val()
-      },
-        function(data){
-          document.getElementById('message').innerHTML = data;
-          $('#message').slideDown('slow');
-          $('#submit').removeAttr('disabled');
-          if(data.match('success') != null) $('#contactform').slideUp('slow');
-          $(window).trigger('resize');
-        }
-      );
-      });
-      return false;
     });
 
     //WORD ROTATE
@@ -117,31 +54,20 @@ $(function() {
         new WOW().init();
     });
 
-    // SEARCH //
-    // $('a[href="#search"]').on('click', function(event) {
-    //     event.preventDefault();
-    //     $('#search-wrapper').addClass('open');
-    //     $('#search-wrapper > form > input[type="search"]').focus();
-    // });
-    //
-    // $('#search-wrapper, #search-wrapper button.close').on('click keyup', function(event) {
-    //     if (event.target == this || event.target.className == 'close' || event.keyCode == 27) {
-    //         $(this).removeClass('open');
-    //     }
-    // });
+    function scrollToLink(link) {
+      var $href = $(link).attr('href');
+      var $anchor = $($href).offset();
+      $('html, body').animate({ scrollTop: $anchor.top });
+    }
 
-    $('form').submit(function(event) {
-        event.preventDefault();
-        return false;
-    })
+    $('a.page-scroll').click(function(){
+      scrollToLink(this);
+      return false;
+    });
 
-    // ONEPAGER //
-    $('a.page-scroll').bind('click', function(event) {
-        var $anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top
-        }, 1500, 'easeInOutExpo');
-        event.preventDefault();
+    $('nav ul').find('a').click(function(){
+      scrollToLink(this);
+      return false;
     });
 
     $('.entry-content table, #post-content table').addClass('table');
@@ -152,28 +78,6 @@ $(function() {
     $('body').scrollspy({
         target: '.navbar-fixed-top'
     })
-
-/*-----------------------------------------------------------------------------------*/
-/*  PORTFOLIO
-/*-----------------------------------------------------------------------------------*/
-// $(window).load(function() {
-//     'use strict';
-//
-//     var portfolio_selectors = $('.portfolio-filter li a');
-//
-//     if(portfolio_selectors!='undefined'){
-//         var portfolio = $('.portfolio-items');
-//
-//         portfolio_selectors.on('click', function(e){
-//             e.preventDefault();
-//             portfolio_selectors.removeClass('active');
-//             $(this).addClass('active');
-//             var selector = $(this).attr('data-filter');
-//             portfolio.isotope({ filter: selector });
-//             return false;
-//         });
-//     }
-// });
 
 /*-----------------------------------------------------------------------------------*/
 /*  PRELOADER

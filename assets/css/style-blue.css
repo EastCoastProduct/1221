@@ -241,7 +241,11 @@ h1,h2,h3,h4,h5,h6 {
   color: #2971bb;
 }
 
-.navbar-default .navbar-brand:hover,.navbar-default .navbar-brand:focus,.navbar-default .navbar-brand:active,.navbar-default .navbar-brand.active {
+.navbar-default .navbar-brand:focus,.navbar-default .navbar-brand:active {
+  color: #fff;
+}
+
+.navbar-default .navbar-brand:hover {
   color: #2971bb;
 }
 
@@ -838,13 +842,13 @@ textarea#comments {
   overflow: hidden;
 }
 
-.team-member .team-card:hover ul.social-buttons {
+/*.team-member .team-card:hover ul.social-buttons {
   display: block;
   margin-bottom: -100%;
   -webkit-transition: all .3s;
   -moz-transition: all .3s;
   transition: all .3s;
-}
+}*/
 
 .team-member .team-card img {
   -webkit-transition:all ease .5s;
@@ -863,7 +867,7 @@ textarea#comments {
   transition:all ease .5s
 }
 
-.team-member ul.social-buttons {
+/*.team-member ul.social-buttons {
   float: none;
   position: absolute;
   bottom: 100%;
@@ -876,13 +880,13 @@ textarea#comments {
   -webkit-transition: all .3s;
   -moz-transition: all .3s;
   transition: all .3s;
-}
+}*/
 
-.team-member ul.social-buttons > li {
+/*.team-member ul.social-buttons > li {
   margin-top: 50%;
   position: relative;
   top: -20px;
-}
+}*/
 
 .team-member img {
   margin:0 auto;
@@ -996,13 +1000,13 @@ footer p.faded-message {
   font-size: 12px;
 }
 
-ul.social-buttons {
+/*ul.social-buttons {
   float: right;
   margin-bottom:0;
   text-align: center;
-}
+}*/
 
-ul.social-buttons li a {
+/*ul.social-buttons li a {
   display: block;
   width: 40px;
   height: 40px;
@@ -1016,8 +1020,8 @@ ul.social-buttons li a {
   -webkit-transition: all .3s;
   -moz-transition: all .3s;
   transition: all .3s;
-}
-
+}*/
+/*
 ul.social-buttons li a.twitter {
   border: 2px solid #55acee;
   color: #55acee;
@@ -1060,7 +1064,7 @@ ul.social-buttons li a.google:hover {
   border: 2px solid #db4437;
   background-color: #db4437;
   color: #fff;
-}
+}*/
 
 
 .btn:focus,.btn:active,.btn.active,.btn:active:focus {
