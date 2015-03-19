@@ -29,34 +29,12 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
 <link href="assets/css/pe-icons.css" rel="stylesheet">
 
-<!-- jQuery -->
-<script src="assets/js/jquery.js"></script>
-
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
-
-<script type="text/javascript">
-
-    $(window).load(function() {
-        if (window.pageYOffset > 10) {
-            setTimeout(function () {
-                $(".navbar").addClass("navbar-shrink").css( "visibility", "visible" );;
-            }, 1000);
-        };
-    });
-
-    $(document).ready(function(){
-       'use strict';
-
-        jQuery('#headerwrap').backstretch([
-          "assets/img/headers/header01.jpg"
-        ], {duration: 8000, fade: 500});
-    });
-</script>
 
 <!-- Google Analytics -->
 <script>
@@ -69,7 +47,6 @@
   // ga('send', 'pageview');
 </script>
 <!-- End Google Analytics -->
-
 </head>
 
 <body id="page-top" class="index">
@@ -134,13 +111,6 @@
                 background-color: rgba(0,0,0,0.0);
               }
             </style>
-            <script>
-              $(document).ready(function(){
-                $('#transparent-this').click(function(){
-                  $('.backstretch').toggleClass('transparent');
-                });
-              });
-            </script>
             <!--  -->
         </div>
     </div>
@@ -348,16 +318,40 @@
     </div>
 </footer>
 
-<!-- Bootstrap Core JavaScript -->
+<!-- build:js -->
+<script src="assets/js/jquery.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
-
-<!-- Plugin JavaScript -->
 <script src="assets/js/plugins.js"></script>
-
-<!-- Plugins -->
 <script src="assets/js/jqBootstrapValidation.js"></script>
-
-<!-- Custom JavaScript -->
 <script src="assets/js/init.js"></script>
+<!-- endbuild -->
+
+<script type="text/javascript">
+  $(window).load(function() {
+    if (window.pageYOffset > 10) {
+      setTimeout(function () {
+        $(".navbar").addClass("navbar-shrink").css( "visibility", "visible" );;
+      }, 1000);
+    };
+  });
+
+  $(document).ready(function(){
+    'use strict';
+
+    jQuery('#headerwrap').backstretch([
+      "assets/img/headers/header01.jpg"
+    ], {duration: 8000, fade: 500});
+  });
+</script>
+
+<!-- TODO REMOVE  -->
+<script>
+  $(window).load(function() {
+    $('#transparent-this').click(function(){
+      $('.backstretch').toggleClass('transparent');
+    });
+  });
+</script>
+<!--  -->
 </body>
 </html>
