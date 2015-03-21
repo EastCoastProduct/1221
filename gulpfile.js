@@ -10,6 +10,7 @@ gzip        = require('gulp-gzip'),
 htmlreplace = require('gulp-html-replace'),
 rename      = require('gulp-rename'),
 s3          = require('gulp-s3'),
+ghPages     = require('gulp-gh-pages'),
 uglify      = require('gulp-uglify');
 
 var options = {
@@ -59,7 +60,12 @@ gulp.task('build', [
   'compress-js'
 ]);
 
-gulp.task('publish', function(){
+gulp.task('publish-ghp', function(){
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages());
+});
+
+gulp.task('publish-s3', function(){
   return gulp.src('./dist/**')
     .pipe(gzip())
     .pipe(s3(aws, options));
