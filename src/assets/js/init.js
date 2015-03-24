@@ -23,9 +23,9 @@ $(document).ready(function(){
         $('.navbar-toggle:visible').click();
     });
 
-    $('.lb-link').magnificPopup({
-      type: 'image'
-    });
+    // $('.lb-link').magnificPopup({
+    //   type: 'image'
+    // });
 
     //WORD ROTATE
     $('.wodry').wodry({
