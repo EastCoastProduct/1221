@@ -6,11 +6,12 @@ fs          = require('fs'),
 concat      = require('gulp-concat'),
 copy        = require('gulp-copy'),
 filter      = require('gulp-filter'),
+ghPages     = require('gulp-gh-pages'),
 gzip        = require('gulp-gzip'),
 htmlreplace = require('gulp-html-replace'),
+minifyCSS   = require('gulp-minify-css'),
 rename      = require('gulp-rename'),
 s3          = require('gulp-s3'),
-ghPages     = require('gulp-gh-pages'),
 uglify      = require('gulp-uglify');
 
 var options = {
@@ -29,17 +30,25 @@ gulp.task('copy-assets', function(){
     'png,gif,jpg,ico,svg,' +
     'eot,svg,ttf,woff,' +
     'pdf,' +
-    'css' +
-    '}'])
+    '}',
+    '!./src/assets/img/_stock/**/*'])
     .pipe(copy('./dist/assets', {prefix: 2}));
 });
 
 gulp.task('build-html', function(){
   return gulp.src('./src/**/*.html')
     .pipe(htmlreplace({
-      'js': 'assets/js/bundle.min.js'
+      'js': 'assets/js/bundle.min.js',
+      'css': 'assets/css/main.min.css'
     }))
     .pipe(gulp.dest('./dist'));
+});
+
+gulp.task('compress-style', function(){
+  return gulp.src(['./src/assets/css/**/*.css'])
+    .pipe(concat('main.min.css'))
+    .pipe(minifyCSS())
+    .pipe(gulp.dest('./dist/assets/css'));
 });
 
 gulp.task('compress-js', function(){
@@ -50,13 +59,14 @@ gulp.task('compress-js', function(){
     './src/assets/js/jqBootstrapValidation.js',
     './src/assets/js/init.js' ])
     .pipe(concat('bundle.min.js'))
-    // .pipe(uglify())
+    .pipe(uglify())
     .pipe(gulp.dest('./dist/assets/js'));
 })
 
 gulp.task('build', [
   'copy-assets',
   'build-html',
+  'compress-style',
   'compress-js'
 ]);
 
