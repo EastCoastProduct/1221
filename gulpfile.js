@@ -29,7 +29,6 @@ gulp.task('copy-assets', function(){
   return gulp.src(['./src/assets/**/*.{' +
     'png,gif,jpg,ico,svg,' +
     'eot,svg,ttf,woff,' +
-    'pdf,' +
     '}',
     '!./src/assets/img/_stock/**/*'])
     .pipe(copy('./dist/assets', {prefix: 2}));
